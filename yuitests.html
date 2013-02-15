@@ -1,0 +1,70 @@
+<html>
+<head>
+  <title>Test Pages</title>
+	<script src="http://yui.yahooapis.com/3.7.3/build/yui/yui-min.js"></script>
+
+	<script>
+		
+		YUI().use('node', 'event', function (Y) {
+   	
+   			Y.on('domready', function() {
+    		
+    			YUI().use('resize', function(Y) {
+				    var resizeWidget = new Y.Resize({node: '#contentport'});
+
+				    resizeWidget.on({
+
+				    	resize: function(event) {
+				    		var portWidth = event.info.offsetWidth;
+
+							var bodyWidth = Y.one('body').get('offsetWidth');
+							
+							Y.one('#viewport').setStyle('left', portWidth + 'px').setStyle('width', (bodyWidth - portWidth) + 'px');
+
+						}	
+				    });   
+				});
+    		});
+		});
+	
+	</script>
+	
+	<style>
+		#contentport {
+	 		position: absolute;
+	  		top: 0;
+	  		left: 0;
+	  		width: 235px;
+	  		height: 100% !important;
+	  		padding-right: 5px;
+	  		border: 2px solid;
+	  		margin-left: 10px;
+		}
+
+		#viewport {
+		  position: absolute;
+		  top: 0;
+		  right: 0;
+		  bottom: 0;
+		  left: 250px;
+		  width: 100%;
+		  height: 100%;
+		  border: 2px solid;
+		}
+
+	
+	</style>
+</head>
+<body>
+	<div id="contentport">
+		Content.
+	<div>
+
+	<div id="viewport">
+		<iframe src="http://www.google.com/trends/correlate/whitepaper.pdf" style="width:100%; height:100%;">
+
+		</iframe>
+	<div>
+
+</body>
+</html>
