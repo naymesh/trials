@@ -1,0 +1,7 @@
+This is the awesome Feaure B. 
+
+First Release.
+
+Changes part 1 after master merge.
+
+Changes part 2 - work continues on FeatureB
