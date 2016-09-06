@@ -1,5 +1,7 @@
 Feature A file.
 
+Master change1
+
 Changes to Feature A on master.
 
 Changes to Feature A part 2.
