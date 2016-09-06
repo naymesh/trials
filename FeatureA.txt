@@ -2,6 +2,8 @@ Feature A file.
 
 Master change1
 
+Master change2
+
 Changes to Feature A on master.
 
 Changes to Feature A part 2.
